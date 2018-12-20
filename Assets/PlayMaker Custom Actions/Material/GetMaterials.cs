@@ -21,9 +21,7 @@ namespace HutongGames.PlayMaker.Actions
 		[Tooltip("Event sent if material was not found")]
 		public FsmEvent fail;
 
-		string _token = " (instance)";
-		
-		public override void Reset()
+        public override void Reset()
 		{
 			gameObject = null;
 			materials = null;
@@ -49,10 +47,8 @@ namespace HutongGames.PlayMaker.Actions
 				return false;
 			}
 
-
-            Material[] _mat = go.GetComponent<Renderer>().materials;
-
             materials.Values = go.GetComponent<Renderer>().materials;
+
 
             return true;
 		}
